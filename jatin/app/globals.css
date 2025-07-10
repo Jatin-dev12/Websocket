@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #000000;
+  }
+}
+
+body {
+  background: var(--background);
+  color: #fff;
+    font-family: 'Outfit', sans-serif  !important;
+}
+h3 {
+    font-size: 20px;
+}
+
+h2.laet {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.main div{
+  transition: .3s all ease;
+}
+.main div:hover{
+  transform: scale(1.01);
+  background: rgba(255, 255, 255, 0.145);
+}
+
+
+
+
+
+@media (max-width:990px){
+  .main {
+    grid-template-columns: repeat(1,1fr) !important;
+}
+h2.laet {
+    /* text-transform: uppercase; */
+    font-size: 20px;
+}
+}
